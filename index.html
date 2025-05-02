@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Love for Raihan</title>
+  <style>
+    body {
+      text-align: center;
+      margin-top: 100px;
+      font-family: Arial, sans-serif;
+    }
+
+    a {
+      font-size: 24px;
+      text-decoration: none;
+      color: red;
+      border: 2px solid red;
+      padding: 10px 20px;
+      border-radius: 10px;
+      transition: 0.3s;
+    }
+
+    a:hover {
+      background-color: red;
+      color: white;
+    }
+
+    .heart {
+      position: relative;
+      width: 200px;
+      height: 180px;
+      margin: 50px auto;
+      background: red;
+      transform: rotate(-45deg);
+      display: none;
+    }
+
+    .heart::before,
+    .heart::after {
+      content: "";
+      position: absolute;
+      width: 200px;
+      height: 180px;
+      background: red;
+      border-radius: 50%;
+    }
+
+    .heart::before {
+      top: -100px;
+      left: 0;
+    }
+
+    .heart::after {
+      left: 100px;
+      top: 0;
+    }
+
+    .heart p {
+      position: absolute;
+      top: 70px;
+      left: 50%;
+      transform: translateX(-50%) rotate(45deg);
+      color: white;
+      font-size: 20px;
+      font-weight: bold;
+    }
+  </style>
+</head>
+<body>
+
+  <a href="#" onclick="showLove()">Click Here</a>
+
+  <div class="heart" id="loveMessage">
+    <p>I love u Raihan</p>
+  </div>
+
+  <script>
+    function showLove() {
+      document.getElementById("loveMessage").style.display = "block";
+    }
+  </script>
+
+</body>
+</html>
